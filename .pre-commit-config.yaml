@@ -1,0 +1,19 @@
+repos:
+-   repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+    - id: black
+      language_version: python3.11
+-   repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+    - id: flake8
+-   repo: local
+    hooks:
+      - id: requirements
+        name: generate requirements.txt
+        entry: python generate_requirements.py
+        language: system
+        files: \.py$
+        pass_filenames: false
+        stages: [commit]
