@@ -12,6 +12,8 @@ class HtmlCollector:
 
         column_names = [th.text for th in trs.find_all("th")]
 
+        column_names[11] = "total_yards"
+
         player_table_rows = players_stats_table.find("tbody").find_all("tr")
 
         essential_information = []

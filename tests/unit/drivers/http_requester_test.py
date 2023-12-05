@@ -10,5 +10,5 @@ def test_requeste_from_page(requests_mock):
 
     response = http_requester.request_from_page()
 
-    assert response["status_code"] == 200
-    assert response["html"] == reponse_context
+    assert response.status_code == 200
+    assert response.html == reponse_context
