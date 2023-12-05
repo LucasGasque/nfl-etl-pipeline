@@ -1,0 +1,18 @@
+repos:
+-   repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.0.40
+    hooks:
+      - id: lint
+-   repo: https://github.com/PyCQA/flake8
+    rev: 6.1.0
+    hooks:
+    - id: flake8
+-   repo: local
+    hooks:
+      - id: requirements
+        name: generate requirements.txt
+        entry: python generate_requirements.py
+        language: system
+        files: \.py$
+        pass_filenames: false
+        stages: [commit]
