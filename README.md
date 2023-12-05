@@ -5,7 +5,6 @@ Este projeto é uma ETL (Extract, Transform, Load) escrita em Python que faz o s
 
 ## Pré-requisitos
 
-- Python 3.11+
 - Docker
 
 ## Como executar
